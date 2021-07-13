@@ -1,5 +1,6 @@
+<%= link_to prototype_path(prototype) do %>
 <div class="card">
-  <%=link_to image_tag prototype.image.variant(resize: '500x500'), class: 'card__img' if prototype.image.attached?%>
+  <%= image_tag prototype.image.variant(resize: '500x500'),class: 'card__img' if prototype.image.attached? %>
   <div class="card__body">
     <%= link_to prototype.title, prototype_path(prototype),method: :get, class: :card__title%>
     <p class="card__summary">
@@ -8,3 +9,4 @@
     <%= link_to "by  #{prototype.user.name}", user_path(prototype.user), class: :card__user %>
   </div>
 </div>
+<% end %>

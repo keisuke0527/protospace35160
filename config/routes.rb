@@ -5,8 +5,8 @@ Rails.application.routes.draw do
    resources :comments, only: :create
   end
 
-  resources :users, only: [:index,:new,:create,:show]
-  resources :prototypes, only: [:index, :new, :create, :destroy, :edit, :update, :show]do
+  resources :users, only: [:new,:create,:show]
+  resources :prototypes, only: [:new, :create, :destroy, :edit, :update, :show]do
 end
 end
 
